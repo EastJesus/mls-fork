@@ -1,0 +1,82 @@
+@import '../../styles/vars';
+
+.section-book-highlights {
+    &__highlights-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 64px;
+
+        @media (max-width: $grid-xxl) {
+            row-gap: 50px;
+        }
+
+        @media (max-width: $grid-md) {
+            row-gap: 30px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 70px;
+
+        @media (max-width: $grid-xxl) {
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: $grid-md) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .highlight {
+        flex-basis: calc(33% - 64px);
+
+        @media (max-width: $grid-xxl) {
+            flex-basis: calc(50% - 32px)
+        }
+
+        @media (max-width: $grid-md) {
+            flex-basis: 100%;
+        }
+
+        &__info {
+            display: flex;
+            align-items: center;
+        }
+
+        &__image {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+        }
+
+        &__author {
+            padding-left: 16px;
+        }
+
+        &__date {
+            margin-left: auto;
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        &__content {
+            padding-top: 16px;
+        }
+
+        &__title {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 23px;
+        }
+
+        &__text {
+            padding-top: 8px;
+            font-size: 14px;
+            line-height: 18px;
+            color: #686868;
+            margin-top: 0;
+        }
+    }
+}

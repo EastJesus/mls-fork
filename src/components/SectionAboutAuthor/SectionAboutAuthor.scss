@@ -1,0 +1,51 @@
+@import '../../styles/vars';
+
+$grid-gap: 35px;
+
+.section-about-author {
+  color: #333;
+  display: grid;
+  font-size: 24px;
+  line-height: 34px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'photo title'
+                       'photo text';
+  grid-gap: $grid-gap;
+
+  @media (max-width: $grid-md) {
+    font-size: 16px;
+    line-height: 24px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'title'
+                         'photo'
+                         'text';
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    grid-area: title;
+  }
+
+  &__photo {
+    grid-area: photo;
+
+    @media (max-width: $grid-md) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    grid-area: text;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

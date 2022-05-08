@@ -1,0 +1,79 @@
+@import '../styles/vars';
+
+.section {
+  margin-bottom: 110px;
+
+  @media (max-width: $grid-md) {
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: $grid-xxl) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  &--intro {
+    // margin-bottom: 385px;
+
+    @media (max-width: $grid-md) {
+      margin-bottom: 80px;
+    }
+  }
+
+  // &--about-book {}
+
+  // &--for-whom {}
+
+  &--read-first {
+    margin-bottom: 135px;
+
+    @media (max-width: $grid-md) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &--about-author {
+    margin-bottom: 140px;
+
+    @media (max-width: $grid-md) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &--reviews {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 170px;
+
+    @media (max-width: $grid-md) {
+      margin-bottom: 100px;
+    }
+  }
+
+  // &--faq {}
+
+  &--book-presentation {
+    margin-bottom: 190px;
+
+    @media (max-width: $grid-md) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &--table-of-contents {
+    margin-bottom: 60px;
+  }
+
+  &--book-highlights,
+  &--what-the-internet-says {
+    margin-bottom: 160px;
+
+    @media (max-width: $grid-xxl) {
+      margin-bottom: 150px;
+    }
+
+    @media (max-width: $grid-md) {
+      margin-bottom: 80px;
+    }
+  }
+}

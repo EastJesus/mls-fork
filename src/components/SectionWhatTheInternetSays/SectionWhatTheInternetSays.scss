@@ -1,0 +1,98 @@
+@import '../../styles/vars';
+
+.section-what-the-internet-says {
+    text-align: center;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 26px;
+
+        @media (max-width: $grid-md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__title {
+        margin: 0;
+
+        @media (max-width: $grid-md) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__ratings {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 60px;
+
+        @media (max-width: $grid-md) {
+            flex-direction: column-reverse;
+            gap: 20px;
+        }
+
+        .ratings__rating {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            justify-content: center;
+            align-items: flex-start;
+
+            .ratings__reviews {
+                font-size: 20px;
+                line-height: 24px;
+                text-decoration: underline;
+            }
+        }
+
+        .stars-rating__logo {
+            width: 100%;
+        }
+
+        .ratings__rating:nth-child(2) {
+            .stars-rating__logo {
+                top: 0;
+            }
+        }
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 20px;
+
+        .cards__card {
+            flex-basis: calc(33% - 12px);
+
+            text-align: center;
+            line-height: 21px;
+
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 48px 36px;
+            border-radius: 10px;
+
+            &.highlighted {
+                background-color: #FFF4EF;
+            }
+
+            .card__subtext {
+                padding-top: 11px;
+            }
+
+            .card__author {
+                color: #717171;
+            }
+
+            .card__pretext {
+                font-weight: 500;
+            }
+
+            .card__source {
+                color: #FF7A3F;
+                font-style: italic;
+            }
+        }
+    }
+}

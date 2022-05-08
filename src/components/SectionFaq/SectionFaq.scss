@@ -1,0 +1,27 @@
+@import '../../styles/vars';
+
+.section-faq {
+
+  &__title {
+    margin-bottom: 52px;
+    text-align: center;
+
+    @media (max-width: $grid-md) {
+      text-align-last: left;
+      margin-bottom: 20px;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover { text-decoration: none; }
+  }
+}
+
+.question {
+  $this: &;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}

@@ -1,0 +1,72 @@
+@import '../../styles/vars';
+
+.review {
+  $this: &;
+  height: -webkit-fill-available;
+
+  @media (max-width: $grid-md) {
+    height: auto;
+  }
+
+  &__inner {
+    border-radius: 10px;
+    display: block;
+    margin: 0 20px 70px;
+    padding: 40px 20px 56px;
+    transition: all 1s;
+
+    @media (max-width: $grid-md) {
+      margin: 0 20px 34px;
+      box-shadow: none;
+      padding: 12px 8px;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      // @media (max-width: $grid-md) {
+      //   box-shadow: none;
+
+      //   &:hover {
+      //     box-shadow: none;
+      //   }
+      // }
+    }
+  }
+
+  &__avatar {
+    min-height: 110px;
+    min-width: 110px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 26px;
+    padding-top: 11px;
+
+    @media (max-width: $grid-md) {
+      font-size: 16px;
+      line-height: 150%;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__name {
+    color: $color-ginger;
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 8px;
+    font-weight: 500;
+
+    @media (max-width: $grid-md) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+}
+
+.section-reviews__title {
+  margin-bottom: 11px;
+}

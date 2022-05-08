@@ -1,0 +1,66 @@
+@import '../../styles/vars';
+
+.section-for-whom {
+
+  &__title {
+    margin-bottom: 48px;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0 -20px;
+    padding: 0;
+  }
+
+  &__list-item {
+    padding: 0 20px;
+
+    @media (max-width: $grid-md) {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    &::before {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: '';
+      display: inline-block;
+      width: 140px;
+      height: 140px;
+
+      @media (max-width: $grid-md) {
+        width: 81px;
+        height: 81px;
+      }
+    }
+  }
+
+  &__list-item-1::before { background-image: url(../../images/star-1.svg); }
+  &__list-item-2::before { background-image: url(../../images/star-2.svg); }
+  &__list-item-3::before { background-image: url(../../images/star-3.svg); }
+  &__list-item-4::before { background-image: url(../../images/star-4.svg); }
+}
+
+.for-whom {
+
+  &__title {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 8px;
+
+    @media (max-width: $grid-md) {
+      font-size: 18px;
+    }
+  }
+
+  &__description {
+    color: #333;
+    font-size: 16px;
+    line-height: 24px;
+
+    @media (max-width: $grid-md) {
+      font-size: 16px;
+    }
+  }
+}

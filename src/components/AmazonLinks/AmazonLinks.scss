@@ -1,0 +1,76 @@
+@import '../../styles/vars';
+
+.amazon {
+  $this: &;
+  display: block;
+  padding: 9px 16px;
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+
+    #{$this}__text {
+      text-decoration: none;
+    }
+  }
+
+  &__title {
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 4px;
+    text-decoration: underline;
+
+    @media (max-width: $grid-lg) {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}
+
+.book-variants {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    border-left: 1px solid #000;
+  }
+}
+
+.book-variant {
+  $this: &;
+  display: block;
+  padding: 9px 16px;
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+
+    #{$this}__type {
+      text-decoration: none;
+    }
+  }
+
+  &__price {
+    display: block;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 20px;
+    margin-bottom: 6px;
+
+    @media (max-width: $grid-lg) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+
+  &__type {
+    display: block;
+    font-size: 12px;
+    line-height: 12px;
+    text-decoration: underline;
+  }
+}

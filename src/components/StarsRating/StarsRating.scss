@@ -1,0 +1,37 @@
+@import '../../styles/vars';
+
+.stars-rating {
+  $this: &;
+
+  &__star {
+
+    + #{$this}__star { margin-left: 4px; }
+  }
+
+  &__value {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+    padding-left: 14px;
+    padding-top: 2px;
+  }
+
+  &__reviews-amount {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-left: 14px;
+    padding-top: 2px;
+  }
+
+  &__logo {
+    margin-left: 14px;
+  }
+
+  &:first-child {
+    .stars-rating__logo {
+      position: relative;
+      top: 3px;
+    }
+  }
+}

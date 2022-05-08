@@ -1,0 +1,46 @@
+@mixin setBgColorAndHover($baseColor, $darkenLevel: 5%) {
+  background-color: $baseColor;
+
+  &:active,
+  &:focus,
+  &:hover { background-color: darken($baseColor, $darkenLevel); }
+}
+
+.btn {
+  border-radius: 10px;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 21px;
+  padding: 14px 20px;
+
+  @media (max-width: $grid-md) {
+    font-size: 18px;
+    padding: 9px 18px;
+  }
+
+  &--git {
+    padding-right: 60px;
+    position: relative;
+
+    &:after {
+      background-image: url(../images/github-fill.svg);
+      content: '';
+      display: block;
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.btn-primary {
+  @include setBgColorAndHover($color-ginger, 15%);
+  border-color: $color-ginger;
+
+  &:active,
+  &:focus,
+  &:hover  { border-color: $color-ginger; }
+}

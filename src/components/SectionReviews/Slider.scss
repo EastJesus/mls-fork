@@ -1,0 +1,72 @@
+@import '../../styles/vars';
+
+.reviews__arrow {
+    @media (max-width: $grid-md) {
+        display: none;
+    }
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    background: #FFF4EF;
+    box-shadow: 2.27027px 1.7027px 14.1892px 1.7027px rgba(220, 227, 244, 0.8);
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    z-index: 2;
+    top: calc(50% - 35px);
+
+    &_next {
+        right: 0;
+        transform: rotate(180deg);
+    }
+}
+
+.slick-list {
+    padding: 20px;
+    height: fit-content !important;
+
+    @media (max-width: $grid-md) {
+        height: auto !important;
+    }
+}
+
+.slick-track {
+    display: flex;
+    height: 100%;
+
+    @media (max-width: $grid-md) {
+        height: auto;
+    }
+}
+
+.slick-slide {
+    padding-top: 25px;
+}
+.slick-slide, .review__inner {
+    height: inherit;
+}
+.slick-slide > div {
+    height: 100%;
+
+    @media (max-width: $grid-md) {
+        height: auto;
+    }
+}
+
+span[data-forhalf="★"] {
+    color: #FFB520;
+}
+
+.slick-slide.slick-active .review__inner {
+    box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        box-shadow: 0px 24px 52px rgba(0, 0, 0, 0.1);
+    }
+}

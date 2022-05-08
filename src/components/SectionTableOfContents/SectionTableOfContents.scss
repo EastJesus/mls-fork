@@ -1,0 +1,93 @@
+@import '../../styles/vars';
+
+.section-table-of-contents {
+  border-radius: 20px;
+  background-color: $color-ginger-light;
+  display: flex;
+  padding: 60px;
+
+  @media (max-width: $grid-md) {
+    border-radius: 0;
+    padding: 60px 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+.contents {
+  $this: &;
+
+  &__list {
+    list-style: none;
+    padding-left: 0;
+
+    @media (max-width: $grid-md) {
+      list-style-position: inside;
+    }
+
+    #{$this}__list {
+      list-style: none;
+      padding-left: 50px;
+
+      @media (max-width: $grid-md) {
+        padding-left: 0;
+      }
+
+      #{$this}__list-item {
+        counter-increment: chaptersCounter;
+        padding-left: 0;
+
+        &:not(:last-of-type) {
+          margin-bottom: 16px;
+        }
+
+        &:before {
+          content: 'Chapter ' counter(chaptersCounter) ':';
+          float: left;
+          margin-right: 8px;
+          position: static;
+        }
+      }
+
+      #{$this}__list-item-title {
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__list-item {
+    counter-increment: mainChapter;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    position: relative;
+
+    &:before {
+      content: counter(mainChapter, upper-roman) '.';
+      padding-right: 5px;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__list-item-title {
+
+    &:after {
+      content: '';
+      display: block;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__list-item-link {
+    color: $color-ginger;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+  }
+}

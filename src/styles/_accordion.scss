@@ -1,0 +1,71 @@
+@import './vars';
+
+.accordion-button {
+  font-size: 26px;
+  line-height: 34px;
+  padding: 24px 40px 8px;
+
+  @media (max-width: $grid-md) {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &::after {
+    background-image: url('data:image/svg+xml,<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.4286 9.42857H12.5714V1.57143C12.5714 0.704 11.8674 0 11 0C10.1326 0 9.42857 0.704 9.42857 1.57143V9.42857H1.57143C0.704 9.42857 0 10.1326 0 11C0 11.8674 0.704 12.5714 1.57143 12.5714H9.42857V20.4286C9.42857 21.296 10.1326 22 11 22C11.8674 22 12.5714 21.296 12.5714 20.4286V12.5714H20.4286C21.296 12.5714 22 11.8674 22 11C22 10.1326 21.296 9.42857 20.4286 9.42857Z" fill="black"/></svg>');
+    width: 22px;
+    height: 22px;
+    background-size: contain;
+
+    @media (max-width: $grid-md) {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &:focus {
+    border: 0;
+    box-shadow: none;
+  }
+
+  &:not(.collapsed) {
+    color: #000;
+    background-color: $color-ginger-light;
+    box-shadow: none;
+
+    @media (max-width: $grid-md) {
+      background-color: transparent;
+    }
+
+    &::after {
+      background-image: url('data:image/svg+xml,<svg width="22" height="4" viewBox="0 0 22 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.42857 0.285156H20.4286C21.296 0.285156 22 0.989156 22 1.85659C22 2.72401 21.296 3.42801 20.4286 3.42801H9.42857H1.57143C0.704 3.42801 0 2.72401 0 1.85659C0 0.989156 0.704 0.285156 1.57143 0.285156H9.42857Z" fill="black"/></svg>');
+      background-position: center center;
+    }
+  }
+}
+
+.accordion-body {
+  background-color: $color-ginger-light;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 40px 24px;
+
+  @media (max-width: $grid-md) {
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.accordion-item {
+  border: 0;
+  border-radius: 20px !important;
+
+  @media (max-width: $grid-md) {
+    border-bottom: 1px solid #D2D6DB;
+    border-radius: 0 !important;
+    padding-bottom: 5px;
+  }
+}
